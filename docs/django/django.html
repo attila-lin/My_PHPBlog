@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="generator" content="ReText 4.0.1">
+<title>django</title>
+</head>
+<body>
+<h1>配置django</h1>
+<p>简单的配置一个blog</p>
+<p>先安装各种软件，django，mysql，python-mysqldb等可以用esay_install直接安装，不详细赘述。</p>
+<pre><code>django-admin.py startproject mysite
+</code></pre>
+<p>然后切到/mysite目录下，有个manage.py</p>
+<pre><code>chmod u+x manage.py
+
+./manage.py runserver 0.0.0.0:8000
+</code></pre>
+<p>就可以开浏览器看看什么效果了。</p>
+<pre><code>./manage.py startapp blog
+
+cd blog
+vim models.py
+</code></pre>
+<p><img alt="models.py" src="Selection_047.png" title="models.py"></p>
+<pre><code>cd ../mysite
+vim settings.py
+</code></pre>
+<p><img alt="settings.py(1)" src="Selection_048.png" title="settings.py1"></p>
+<p><img alt="settings.py(2)" src="Selection_050.png" title="settings.py2"></p>
+<pre><code>vim urls.py
+</code></pre>
+<p><img alt="urls.py" src="Selection_052.png" title="urls.py"></p>
+<pre><code>python manage.py shell 
+&gt;&gt;&gt; from django.contrib.sites.models import Site
+&gt;&gt;&gt; Site.objects.create(pk=1, domain='ml-service.edx.org', name='ml-service')
+</code></pre>
+<p>http://x.x.x.x:8000/admin</p>
+</body>
+</html>

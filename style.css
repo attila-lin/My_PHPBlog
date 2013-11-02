@@ -1,0 +1,215 @@
+/* style.css -- defines main style for mBlog, feel free to edit! */
+
+nav {
+  margin           : 10px auto 0px auto;
+  padding          : 0px;
+  float            : left;
+  width            : 10%;
+}
+
+nav ul {
+  list-style       : none;
+  padding          : 0px 0px 0px 0px;
+  /*margin           : 0px;*/
+  border-bottom    : 1px dotted #DDD;
+
+  padding: 5px;
+  margin: 10px 0;
+  list-style: none;
+  float: left;
+}
+
+nav li {
+  border-top       : 1px dotted #DDD;
+  padding          : 5px 0px 5px 10px;
+
+  float: left;
+  display: inline; /*For ignore double margin in IE6*/
+  margin: 0 10px;
+}
+
+nav ul li a {
+  font-family      :  Geneva, Arial, Helvetica, sans-serif;
+  text-decoration  : none;
+  font-size        : 12px;
+  /*color: #ffffff; */
+
+
+  /*text-decoration: none;*/
+  float:left;
+  color: #999;
+  cursor: pointer;
+  font: 900 14px/22px "Arial", Helvetica, sans-serif;
+}
+
+ 
+nav ul li a span {
+    margin: 0 10px 0 -10px;
+    padding: 1px 8px 5px 18px;
+    position: relative; /*To fix IE6 problem (not displaying)*/
+    float:left;
+}
+
+
+/*hover: if the mouse is on*/
+nav ul li:hover {
+  background-color : #3F3F3F;
+}
+
+
+
+article {
+  background-color : #EEE;
+  padding          : 1px 5px 5px 5px;
+  margin           : 10px auto 15px 0px;
+  width            : 85%;
+  float            : right;
+}
+
+article h1 {
+  margin            : -2px -10px 3px -10px;
+  padding           : 5px 10px 3px 6px;
+  font-weight       : normal;
+  font-size         : 30px;
+  color             : #FFF;
+  background-color  : #4863A0;
+  box-shadow        : 0 5px 5px 0 #666;
+  -moz-box-shadow   : 1px 7px 7px #666;
+  -webkit-box-shadow: 0 5px 5px #666;
+  border-radius: 4px; /*border-radius*/
+
+  text-shadow: 0 .5px 0 #ccc,
+               0 1px 0 #c9c9c9,
+               0 1.5px 0 #bbb,
+               0 2px 0 #b9b9b9,
+               0 2.5px 0 #aaa,
+               0 3px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 2px 2px rgba(0,0,0,.3),
+               0 4px 6px rgba(0,0,0,.2),
+               0 7px 12px rgba(0,0,0,.25),
+               0 15px 15px rgba(0,0,0,.2),
+               0 30px 30px rgba(0,0,0,.15);
+   /* text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);*/
+}
+
+/*add*/
+p{
+  margin:0 0 9px;
+  font-family:"Arvo","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;
+  line-height:18px
+}
+
+em{
+  font-style:italic
+}
+/*
+blockquote{
+  padding:0 0 0 15px;
+  margin:0 0 18px;
+  border-left:5px solid #eee
+}
+
+blockquote p{
+  margin-bottom:0;
+  font-size:16px;
+  font-weight:300;
+  line-height:22.5px
+}
+*/
+.demo {
+  border-radius: 10px;
+}
+
+h2,h3,h4,h5,h6{
+  margin:0;
+  font-weight:bold;
+  color:#444;
+  text-rendering:optimizelegibility
+}
+
+h2{
+  font-size:24px;
+  line-height:36px
+}
+
+h3{
+  line-height:27px;
+  font-size:18px
+}
+
+h4,h5,h6{
+  line-height:18px
+}
+h4{font-size:14px}
+h5{font-size:12px}
+h6{font-size:11px;color:#999;text-transform:uppercase}
+
+hr{margin:18px 0;border:0;border-top:1px solid #eee;border-bottom:1px solid #fff}
+
+pre{
+  display:block;padding:8.5px;
+  /*padding:0 3px;*/
+  margin:4 4 9px;
+  font-size:12px;
+  line-height:18px;
+  background-color:#f5f5f5;
+  border:1px solid #ccc;
+  border:1px solid rgba(0,0,0,0.15);
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+  white-space:pre;
+  white-space:pre-wrap;
+  word-break:break-all;
+  word-wrap:break-word
+  }
+
+pre.prettyprint{margin-bottom:18px}
+
+pre code{
+  padding:0;
+  color:inherit;
+  background-color:
+  transparent;
+  border:0
+}
+
+header {
+/* 
+  margin    : 1px 0px 20px 0px;
+  color     : #EEE;*/
+
+/*  font-size : 34px;
+  color: #ffffff;
+  text-shadow: 0px 2px 3px #555;*/
+
+  display: block; text-decoration: none;
+  font: 50px Helvetica, Arial, Sans-Serif; letter-spacing: -5px;  
+  /*text-align: center;*/
+  color: #999; text-shadow: 0px 3px 8px #2a2a2a;
+}
+
+header :hover {
+    color: #a0a0a0; text-shadow: 0px 5px 8px #2a2a2a;
+  }
+
+html {
+  margin           : 0px auto 0px auto;
+  padding          : 5px 0px 0px 0px;
+  width            : 80%;
+  background-image: url(nav_background.jpg);
+  /*background-color : #333;*/
+  color            : #222;
+}

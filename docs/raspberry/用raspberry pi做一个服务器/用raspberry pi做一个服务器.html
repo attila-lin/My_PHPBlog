@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="generator" content="ReText 4.0.1">
+<title>用raspberry pi做个服务器</title>
+</head>
+<body>
+<h1>用raspberry pi做一个服务器</h1>
+<hr>
+<p>主要记下指令：</p>
+<h2>1. install Apache</h2>
+<p>To install Apache and PHP, execute the following commands:</p>
+<pre><code>sudo apt-get install apache2 php5 libapache2-mod-php5
+</code></pre>
+<p>If you get an installation error, run:</p>
+<pre><code>sudo groupadd www-data
+sudo usermod -g www-data www-data
+</code></pre>
+<p>Now restart the service:</p>
+<pre><code>sudo service apache2 restart
+</code></pre>
+<p>Now enter the IP address of your Raspberry Pi into your web browser, and you should see a simple page that says "It Works!"</p>
+<p><img alt="pic1" src="./Selection_002.png" title="pic1"></p>
+<h2>2. Install MySQL</h2>
+<p>To install MySQL, install a few packages with the following command:</p>
+<pre><code>sudo apt-get install mysql-server mysql-client php5-mysql
+</code></pre>
+<p>然后是配置Apache</p>
+<p>配置文件位置和一般linux不同，不是在<em>/etc/httpd/conf/httpd.conf</em>，而是在<em>/etc/apache2/</em>下，并分成了几个文件：<em>ports.conf, apache2.conf,/conf.d/</em>下的文件，主要是配置端口什么的。具体看以后的需求。</p>
+<p>测试PHP</p>
+<pre><code>http://10.214.9.220/test.php
+</code></pre>
+<p><img alt="pic2" src="Selection_003.png" title="pic2"></p>
+</body>
+</html>
