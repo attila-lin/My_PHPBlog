@@ -1,4 +1,5 @@
-# bootloader
+bootloader
+====
 
 ### 实验要求：
 David Welch的 GitHub 的bootloader05给出了一个非常简单的RPi bootloader，他的代码链接在内存的0x00020000位置，一直在监听串口是否有XMODEM协议的文件下载，如果有就开始接收数据，并复制到0x00008000位置，传输完成后跳转到 0x00008000去执行。

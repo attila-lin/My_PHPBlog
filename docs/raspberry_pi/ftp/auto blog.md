@@ -1,17 +1,11 @@
-#自动博客更新
+自动博客更新
+====
 
----
 
 最近用了一个轻量的博客php，配合Markdown使用————[mBlog](https://github.com/neofish/mBlog)，简约风格。
 
 十分方便，下载，放到/var/www处解压，将markdown文件放到docs文件夹下即可。
-
-![pic1](Selection_021.png pic1)
-
 话说CSS并不是符合自己的要求
-
-![pic2](Selection_022.png pic2)
-
 如图，没有代码高亮，没有分割线，不能添加图片等问题，还好是开源的，所有有时间自己修改。
 
 然后今天的话题是博客的自动更新，也就是要将本地的blog文件夹通过ftp上传服务器raspberry pi的指定文件夹下。
