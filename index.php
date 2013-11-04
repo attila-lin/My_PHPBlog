@@ -65,7 +65,7 @@ ob_start();
     <meta charset="utf-8">
     <title>{title}</title>
     <link href="style.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/whateverblog/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/whateverblog/img/favicon2.ico" type="image/x-icon" />
   </head>
 
 

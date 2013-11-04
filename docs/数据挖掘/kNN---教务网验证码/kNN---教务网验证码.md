@@ -125,3 +125,8 @@ kNN---教务网验证码
 	print classifierResult2
 	print classifierResult3
 	print classifierResult4
+
+效果：
+
+
+![result](Selection_176.png 'kNN')
