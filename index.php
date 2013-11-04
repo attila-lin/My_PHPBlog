@@ -23,6 +23,8 @@ else{
       $ext = strtolower(preg_filter('/^.*\.([^\.]+)$/', '\1', $item));
       if (in_array($ext, array('md', 'html', 'mkd'))){
         $text = file_get_contents($root . $dir . $item);
+
+        //如果是 'md' or 'mkd' 就用Markdown
         if (($ext == 'md') || ($ext == 'mkd'))
           $text = Markdown($text);
         $tpl->texts[] = array('text' => $text);
@@ -33,8 +35,26 @@ else{
   }
 }
 
+
+//添加返回上层的导航
+$formdir = substr($dir,0,-1);
+
+if (strrpos($formdir, "/") != false){
+  $formdir =  substr($formdir,0,strrpos($formdir, "/")+1);
+  // echo $formdir;
+}
+else{
+  $formdir = "";
+}
+
+
 $tpl->title = $title;
 $tpl->dir = $dir;
+
+
+
+$tpl->formdir = $formdir;
+
 ob_start();
 
 ?>
@@ -45,15 +65,19 @@ ob_start();
     <meta charset="utf-8">
     <title>{title}</title>
     <link href="style.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/whateverblog/test/favicon1.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/whateverblog/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <header>{title} /{dir}</header>
+    <!--header>{title} /{dir}</header!-->
+    <header>{title}</header>
     <nav>
+      <!-- 左边的导航 -->
       <ul>
-        <li><a href="./" style="font-size:14px; color:#ff9900">H o m e</a></li>
+        <li><a href="./" style="font-size:15px; color:#ff9900">首页</a></li>
+
+        <li><a href="./?dir={formdir}" style="font-size:14px; color:#ff9900">上一页</a></li>
         {@dirs}
-          <li><a href="./?dir={dirLink}/">{dir}</a></li>
+        <li><a href="./?dir={dirLink}/" style="font-size:14px; color:#ff9900">{dir}</a></li>
         {/dirs}
       </ul>
     </nav>
