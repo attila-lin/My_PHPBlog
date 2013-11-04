@@ -38,9 +38,11 @@
 # software, even if advised of the possibility of such damage.
 
 
-define( 'MARKDOWN_VERSION',  "1.0.1o" ); # Sun 8 Jan 2012
+define( 'MARKDOWN_VERSION',  "1.1.1" ); # 2013.11.4 whatever1992 fixed
 
-
+##########################################################################
+#_doImages_reference_callback
+##########################################################################
 #
 # Global default settings:
 #
@@ -66,7 +68,9 @@ define( 'MARKDOWN_VERSION',  "1.0.1o" ); # Sun 8 Jan 2012
 
 @define( 'MARKDOWN_PARSER_CLASS',  'Markdown_Parser' );
 
-function Markdown($text) {
+function Markdown($text, $dir) {
+
+	$GLOBALS["dir"] = $dir;
 #
 # Initialize the parser and return the result of its transform method.
 #
@@ -863,7 +867,7 @@ class Markdown_Parser {
 		$alt_text = $this->encodeAttribute($alt_text);
 		if (isset($this->urls[$link_id])) {
 			$url = $this->encodeAttribute($this->urls[$link_id]);
-			$result = "<img src=\"$url\" alt=\"$alt_text\"";
+			$result = "<img src=\"docs/$GLOBALS[dir]$url\" alt=\"$alt_text\"";
 			if (isset($this->titles[$link_id])) {
 				$title = $this->titles[$link_id];
 				$title = $this->encodeAttribute($title);
@@ -887,7 +891,7 @@ class Markdown_Parser {
 
 		$alt_text = $this->encodeAttribute($alt_text);
 		$url = $this->encodeAttribute($url);
-		$result = "<img src=\"$url\" alt=\"$alt_text\"";
+		$result = "<img src=\"docs/$GLOBALS[dir]$url\" alt=\"$alt_text\"";
 		if (isset($title)) {
 			$title = $this->encodeAttribute($title);
 			$result .=  " title=\"$title\""; # $title already quoted

@@ -26,7 +26,7 @@ else{
 
         //如果是 'md' or 'mkd' 就用Markdown
         if (($ext == 'md') || ($ext == 'mkd'))
-          $text = Markdown($text);
+          $text = Markdown($text,  $dir);
         $tpl->texts[] = array('text' => $text);
       }
     }
@@ -72,7 +72,7 @@ ob_start();
   <body>
     <!--header>{title} /{dir}</header!-->
     <header>{title}</header>
-    <div>
+
     <nav>
       <!-- 左边的导航 -->
       <ul>
@@ -84,13 +84,12 @@ ob_start();
         {/dirs}
       </ul>
     </nav>
-    </div>
 
-    <div>
+
     {@texts}
       <article>{&text}</article>
     {/texts}
-  </div>
+
 
 
     {?error}
