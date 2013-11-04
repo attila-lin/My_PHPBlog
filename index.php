@@ -67,9 +67,12 @@ ob_start();
     <link href="style.css" rel="stylesheet">
     <link rel="shortcut icon" href="/whateverblog/favicon.ico" type="image/x-icon" />
   </head>
+
+
   <body>
     <!--header>{title} /{dir}</header!-->
     <header>{title}</header>
+    <div>
     <nav>
       <!-- 左边的导航 -->
       <ul>
@@ -81,10 +84,13 @@ ob_start();
         {/dirs}
       </ul>
     </nav>
+    </div>
+
+    <div>
     {@texts}
       <article>{&text}</article>
     {/texts}
-
+  </div>
 
 
     {?error}

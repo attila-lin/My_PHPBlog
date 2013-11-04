@@ -218,7 +218,11 @@ html {
   color            : #222;
 }
 
-#copyright { 
+#copyright {
+  padding-top: 6px;
+  margin: 40px 0 20px 0;
+  overflow: hidden;
+  /*border-top: 1px dashed #ddd;*/
   width:97%; 
   margin:0 auto; 
   padding:10px 0; 
