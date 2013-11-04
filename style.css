@@ -24,7 +24,7 @@ nav li {
   border-top       : thick #ff0000;
   padding          : 5px 0px 5px 10px;
 
-  width: 135px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+  width: 100px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
 
   float            : left;
   display          : inline; /*For ignore double margin in IE6*/
@@ -206,8 +206,8 @@ header {
 }
 
 header :hover {
-    color: #a0a0a0; text-shadow: 0px 5px 8px #2a2a2a;
-  }
+  color: #a0a0a0; text-shadow: 0px 5px 8px #2a2a2a;
+}
 
 html {
   margin           : 0px auto 0px auto;
@@ -217,3 +217,17 @@ html {
   /*background-color : #333;*/
   color            : #222;
 }
+
+#copyright { 
+  width:97%; 
+  margin:0 auto; 
+  padding:10px 0; 
+  font-family:Verdana; 
+  font-size:11px; 
+  color:#666666; 
+  text-align:center; 
+  display: block;
+}
+#copyright a:link { color:#666666; }
+#copyright a:visited { color:#666666; }
+#copyright a:hover { color:#FF0000; }

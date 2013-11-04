@@ -1,6 +1,5 @@
-#NexusHD之saythanks
-
----
+NexusHD之saythanks
+======
 
 NexusHD是校内一个高清资源分享平台，资源丰富，被它惯坏了以致再也难以忍受在线视频。很难想象没有NHD的日子啊。
 

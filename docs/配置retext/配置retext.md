@@ -1,6 +1,5 @@
-#配置Retext
-
-----
+配置Retext
+=======
 
 原来以为Retext是不能配置css的，正决定wine个MarkPad，同学搜到了配置方法
 

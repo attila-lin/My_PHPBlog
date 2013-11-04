@@ -1,4 +1,5 @@
-#配置django
+配置django
+=====
 
 简单的配置一个blog
 

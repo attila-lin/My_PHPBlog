@@ -84,10 +84,20 @@ ob_start();
     {@texts}
       <article>{&text}</article>
     {/texts}
+
+
+
     {?error}
       <article><h1>Error</h1><p>The page you are looking for is not here.</p></article>
     {/error}
+
+
+<br/>
+<br/>
+    <div id="copyright">Copyright &copy; 2012-2013 whatever's blog Network Association. Email: linyiyu1992@gmail.com</div>
+
   </body>
 </html>
+
 
 <?php $tpl->render(ob_get_clean()); ?>
