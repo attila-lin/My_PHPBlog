@@ -44,6 +44,10 @@ DocBlockr
 	DocBlockr可以自动生成PHPDoc风格的注释。它支持的语言有Javascript, PHP, ActionScript, CoffeeScript, Java, Objective C, C, C++。
 
 Dayle Rees
-Theme - Flatland
+Theme - Flatland : [Flat-U](http://designmodo.github.io/Flat-UI/)
 	
 	颜色主题
+
+Markdown Preview
+
+	写完之后可以在浏览器中浏览。还可以导出成HTMl代码

@@ -67,6 +67,8 @@ article {
   margin           : 10px auto 15px 0px;
   width            : 85%;
   float            : right;
+  font-family      : Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
 }
 
 article h1 {
@@ -110,9 +112,16 @@ article h1 {
 
 /*add*/
 p{
-  margin:0 0 9px;
-  font-family:"Arvo","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;
-  line-height:18px
+  /*margin:0 0 9px;*/
+  margin  :1em 0;
+  /*font-family:"Arvo","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;*/
+  /*line-height:18px;*/
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-size: 16px;
 }
 
 em{
@@ -136,7 +145,7 @@ blockquote p{
   border-radius: 10px;
 }
 
-h2,h3,h4,h5,h6{
+/*h2,h3,h4,h5,h6{
   margin:0;
   font-weight:bold;
   color:#444;
@@ -158,7 +167,19 @@ h4,h5,h6{
 }
 h4{font-size:14px}
 h5{font-size:12px}
-h6{font-size:11px;color:#999;text-transform:uppercase}
+h6{font-size:11px;color:#999;text-transform:uppercase}*/
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
 
 hr{margin:18px 0;border:0;border-top:1px solid #eee;border-bottom:1px solid #fff}
 
@@ -182,13 +203,26 @@ pre{
 
 pre.prettyprint{margin-bottom:18px}
 
-pre code{
-  padding:0;
-  color:inherit;
-  background-color:
-  transparent;
-  border:0
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
 }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+/*pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}*/
 
 header {
 /* 
