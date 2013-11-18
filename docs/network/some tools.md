@@ -22,6 +22,30 @@ Some NetWork Tools
     Nmap done: 1 IP address (1 host up) scanned in 5.42 seconds
 
 
+扫描网段
+    
+    nmap -v -sP 192.168.1.0/24
+    
+扫描某机
+
+    whatever@whatever:~$ nmap -sV 192.168.1.102 -Pn
+
+    Starting Nmap 6.00 ( http://nmap.org ) at 2013-11-18 21:42 CST
+    Nmap scan report for 192.168.1.102
+    Host is up (0.031s latency).
+    Not shown: 995 filtered ports
+    PORT     STATE SERVICE     VERSION
+    135/tcp  open  msrpc       Microsoft Windows RPC
+    139/tcp  open  netbios-ssn
+    445/tcp  open  netbios-ssn
+    2869/tcp open  http        Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+    5357/tcp open  http        Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+    Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+    
+    Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+    Nmap done: 1 IP address (1 host up) scanned in 52.53 seconds
+
+
 ##w3m
 
 在终端上的浏览器
